@@ -133,7 +133,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: 木火流纪 # blog_name will be displayed in your blog page
-blog_description: 一起大笑吧！
+blog_description: 一起欢笑吧！
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 

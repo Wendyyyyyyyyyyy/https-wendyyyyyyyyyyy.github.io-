@@ -2,64 +2,45 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Keran Wang
     - name: Date of Birth
-      value: 14th March 1879
+      value: 15th September 2002
     - name: Languages
-      value: English, German
+      value: English, Chinese
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Exchange
+      institution: University of Illinois at Urbana-Champaign, Champaign, IL
+      year: 2024
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - Area: Mathematics and Computer Sciences
+        - Score: 4.0/4.0
+    - title: Bachelor
+      institution: University of Hong Kong, Hong Kong
+      year: 2021 - Present
       description:
-        - Description 1.
-        - Description 2.
+        - Area: Mathematics and Computer Sciences
+        - Score: 3.71/4.3
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Research Assistant
+      institution: University of Illinois Urbana-Champaign
+      year: 2024 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Field: Chatbot for Mental Health Support
+        - Position: Research Assistant under Dr. Koustuv Saha
+        - Summary: Developing a conversational chatbot for supporting mental health of caregivers of Alzheimer's Disease and Related Dementias (AD/ADRD) patients. Engineering natural language processing (NLP) pipelines for chatbot interactions, including tokenization, encoding, and sentiment analysis. Fine-tuning pre-trained language models on domain-specific datasets. Conducting user studies to gather feedback from caregivers, addressing their concerns and preferences regarding chatbot usage.
+    - title: Research Assistant
+      institution: University of Hong Kong
+      year: 2023 - 2024
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+        - Field: Computer Vision in Medical
+        - Supervisor: Prof. Kenneth Wong
+        - Summary: Developed machine learning models for analyzing echocardiography videos, focused on prediction of ejection fraction. Pioneered the use of machine learning models for predicting left atrial volume. Achieved breakthroughs in accuracy, boosting model performance by 17.4% with an R-square around 0.8. Addressed the model's initial bias by augmenting the dataset through both manually collected rare data cases and training the model for labeling video data.
 
 - title: Open Source Projects
   type: time_table
@@ -71,27 +52,82 @@
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2022
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - Dean’s Honours List, University of Hong Kong: Recognized for academic excellence during the academic year 2022-2023.
+    - year: 2021
       items:
-        - Max Planck Medal
+        - Young Scientist Scheme, University of Hong Kong: Awarded for outstanding research potential and participation in advanced scientific research projects.
+    - year: 2024
+      items:
+        - HKU Worldwide Undergraduate Student Exchange Scholarships, University of Hong Kong: Awarded for participation in the undergraduate student exchange program.
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Mathematics and Computer Sciences
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
+        - Research in theoretical computer science.
+        - Applied mathematics in real-world problems.
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Reading, Traveling, Coding
+
+- title: Volunteer Experience
+  type: time_table
+  contents:
+    - title: Undergraduate Teaching Assistant
+      institution: Department of Computer Science, University of Hong Kong
+      year: 2023
+      description:
+        - Assisted in teaching COMP1117-Computer Programming course.
+    - title: Undergraduate Teaching Assistant
+      institution: Department of Mathematics, University of Hong Kong
+      year: 2023
+      description:
+        - Assisted in teaching MATH Summer School (MARTHA).
+    - title: Student Ambassador
+      institution: Centre of Development and Resources for Students, University of Hong Kong
+      year: 2023 - Present
+      description:
+        - Represented the university in various outreach programs.
+
+- title: Skills
+  type: list
+  contents:
+    - name: Programming Languages
+      value: Python, C++, C, Java, JavaScript, TypeScript, HTML, MATLAB, R
+    - name: Frameworks and Tools
+      value: PyTorch, TensorFlow, Git, GDB, LaTeX, MySQL, MongoDB, Docker, GCP, Geogebra
+
+- title: Projects
+  type: time_table
+  contents:
+    - title: Cloud-Based Restaurant Recommendation System
+      year: 2024
+      description:
+        - Developed a scalable restaurant recommendation web application on Google Cloud Platform (GCP).
+        - Using HTML for frontend, with Flask for backend services and MySQL for data management.
+    - title: Big Two Card Game Development
+      year: 2022
+      description:
+        - Developed a Java-based Big Two card game featuring GUI, event-handling for user actions.
+        - Implemented multi-threading and networking, enabling real-time data processing and server communication.
+        - Engineered a client-server architecture to facilitate network play for four players.
+    - title: Website Development for Math Course
+      year: 2024 - Present
+      description:
+        - Utilized foundational HTML elements, including DOCTYPE declaration, metadata, and links, to define and format web content.
+        - Employed GitBook styles and plugins, and customized CSS styles to enhance the visual presentation, functionality, and consistency of the site.
+        - Integrated JavaScript, using the jQuery library, to handle dynamic elements and interactive events.
+        - Implemented meta tags for SEO and page metadata management.
+
+- title: Languages
+  type: list
+  contents:
+    - name: English
+      value: IELTS: 7.0
+    - name: Chinese
+      value: Native Speaker

@@ -1,81 +1,199 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: Restaurant Info Application                                                         
+description: a scalable restaurant recommendation web application on Google Cloud Platform
+img: assets/img/411.png
 importance: 2
 category: work
 giscus_comments: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+
+# Restaurant Review Application
+
+
+
+This Flask-based web application allows users to sign up, log in, and manage their profiles, as well as review restaurants and search for restaurants and dishes based on various criteria.
+
+## ER Diagram
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/411.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+## Features
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+### User Authentication
+- **Sign Up**: Users can create a new account by providing a username, password, and their taste preferences.
+- **Login**: Users can log in using their credentials.
+- **Logout**: Allows users to log out of the application.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+### Restaurant Reviews
+- **Add Review**: Logged-in users can add reviews for restaurants, including a star rating and text.
+- **Search Restaurant**: Users can search for restaurants based on category, city, and minimum star rating. Additional filters include restaurant name, postal code, and crime rate in the area.
 
-{% raw %}
+### Dish Management
+- **Search Dish**: Search for dishes by name across different restaurants and retrieve related crime data.
+- **Modify Dish Data**: Users with appropriate permissions can add, delete, or update dish details in the database.
+- **List All Dishes**: Displays all dishes in the database.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
+### Advanced Features
+- **Transaction**: Demonstration of a complex transaction in SQL, retrieving detailed information about restaurants and associated crime data based on location and rating filters.
+
+## Setup
+
+### Prerequisites
+- Python 3.x
+- Flask
+- Flask-MySQLdb
+- PyYAML
+- A MySQL server
+
+### Installation
+1. Clone the repository:
+```
+git clone [repository_url]
+cd [repository_directory]
+```
+2. Install dependencies:
+```
+pip install flask flask-mysqldb pyyaml werkzeug
+```
+3. Configure the database:
+- Modify the `db.yaml` file under the project directory to include your MySQL database credentials.
+
+### Running the Application
+1. Start the Flask application:
+```
+python app.py
+```
+2. Open a web browser and navigate to `http://127.0.0.1:5000/` to access the application.
+
+## Usage
+- **Home Page**: Accessible at the root URL (`/`). Redirects to the login page if the user is not logged in.
+- **Login/Signup**: Use the login/signup forms to access user-specific functionalities.
+- **Review and Search**: After logging in, users can add reviews, search for restaurants, and manage dish data through the navigation menu.
+
+## Required Advanced SQL Commands
+
+
+```
+DELIMITER //
+CREATE PROCEDURE GetRestaurantInfoWithCrime(
+    IN location_name VARCHAR(31),
+    IN min_rating REAL
+)
+BEGIN
+    -- Declare variable to check if valid restaurants exist
+    DECLARE valid_restaurant_exists BOOLEAN DEFAULT FALSE;
+    -- Start the transaction
+    START TRANSACTION;
+    -- Check if the input min_rating is within a valid range
+    IF min_rating >= 0 AND min_rating <= 5 THEN
+        -- Query to get restaurant information based on location and minimum rating
+        SELECT r.RestaurantName, AVG(rev.Stars) AS AvgRating
+        FROM Restaurant r
+        INNER JOIN Review rev ON r.RestaurantId = rev.RestaurantId
+        INNER JOIN Location loc ON r.LocationId = loc.LocationId
+        WHERE loc.City = location_name
+        GROUP BY r.RestaurantId
+        HAVING AvgRating >= min_rating
+        ORDER BY AvgRating DESC;
+         SELECT c.Type AS Crime_Type, COUNT(*) AS Crime_Count
+         FROM Crime c
+         INNER JOIN Location loc ON c.LocationId = loc.LocationId
+         WHERE loc.City = location_name
+         GROUP BY c.Type;
+    ELSE
+        -- If min_rating is not valid, output an error or a specific message
+        SELECT 'Invalid rating. Please provide a rating between 0 and 5.' AS ErrorMessage;
+    END IF;
+    -- Commit the transaction
+    COMMIT;
+END //
+DELIMITER ;
+
 ```
 
-{% endraw %}
+```
+DELIMITER //
+
+CREATE TRIGGER set_default_review_text
+BEFORE INSERT ON Review
+FOR EACH ROW
+BEGIN
+    IF TRIM(NEW.Text) IS NULL OR TRIM(NEW.Text) = '' THEN
+        IF NEW.Stars >= 4 THEN
+            SET NEW.Text = 'System default Great';
+        ELSEIF NEW.Stars BETWEEN 2 AND 3 THEN
+            SET NEW.Text = 'System default Normal';
+        ELSE
+            SET NEW.Text = 'System default Bad';
+        END IF;
+    END IF;
+
+    -- Additionally, update the average star rating in the Restaurant table
+    UPDATE Restaurant
+    SET Stars = (SELECT AVG(Stars) FROM Review WHERE RestaurantId = NEW.RestaurantId)
+    WHERE RestaurantId = NEW.RestaurantId;
+END;
+
+//
+DELIMITER ;
+```
+
+```
+DELIMITER $$
+CREATE PROCEDURE WithDishRestaurantInfo(
+    IN dishName VARCHAR(127)
+)
+BEGIN
+    DECLARE done INT DEFAULT FALSE;
+    DECLARE vRestaurantId INT;
+    DECLARE vRestaurantName VARCHAR(255);
+    DECLARE vCity VARCHAR(127);
+    DECLARE vState VARCHAR(127);
+    DECLARE cur CURSOR FOR
+        SELECT
+            r.RestaurantId,
+            r.RestaurantName,
+            l.City,
+            l.State
+        FROM Dish d
+        LEFT JOIN Restaurant r ON d.RestaurantId = r.RestaurantId
+        LEFT JOIN Location l ON r.LocationId = l.LocationId
+        WHERE d.Name LIKE CONCAT('%', dishName, '%');
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
+    -- Check if the input dish name is not empty
+    IF TRIM(dishName) = '' THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Dish name cannot be empty';
+    ELSE
+        OPEN cur;
+        read_loop: LOOP
+            FETCH cur INTO vRestaurantId, vRestaurantName, vCity, vState;
+            IF done THEN
+                LEAVE read_loop;
+            END IF;
+            -- Output current restaurant information
+            SELECT vRestaurantId, vRestaurantName, vCity, vState;
+            -- Execute second query for the current restaurant
+            SELECT
+                c.Type AS CrimeType,
+                SUM(c.Count) AS TotalIncidents,
+                AVG(c.Count) AS AverageIncidents
+            FROM Crime c
+            JOIN Occurrence o ON c.CrimeId = o.CrimeId
+            JOIN Restaurant r ON r.RestaurantId = o.RestaurantId
+            WHERE r.RestaurantId = vRestaurantId
+            GROUP BY c.Type
+            ORDER BY TotalIncidents DESC;
+        END LOOP;
+        CLOSE cur;
+    END IF;
+END$$
+DELIMITER ;
+```

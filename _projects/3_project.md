@@ -1,81 +1,58 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+title: Big Two card game
+description: implementing networking and multi-threading capabilities in Java, enabling four players to play over the internet
+img: assets/img/2396.png
+#redirect: https://unsplash.com
 importance: 3
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+## Overview
+This project focuses on enhancing the Big Two card game by implementing networking and multi-threading capabilities in Java, enabling four players to play over the internet. The provided classes and interfaces, including `BigTwoServer`, `CardGameServer`, `CardGameMessage`, `GameMessage`, and `NetworkGame`, will facilitate your implementation. You will develop a `BigTwoClient` class to model the client side of the game, manage game logic, and handle communication with the game server.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## Game Description
+Big Two is a popular card game where the goal is to be the first to play all your cards. Each player is dealt 13 cards, and the game is typically played with a standard deck of 52 cards. The player with the 3 of Diamonds starts the game, and players take turns playing hands of increasing value. The hands can be singles, pairs, triples, or various poker hands.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/2396.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+## Getting Started
+To get started with the game:
+1. **Launch the Game**: Run the `BigTwoClient` class. You will be prompted to enter your name.
+2. **Connect to Server**: The client will establish a connection to the game server.
+3. **Gameplay**: Once all players are connected and ready, the game will start. Play your cards by selecting them and pressing "Play" or pass your turn by pressing "Pass".
+4. **Chat**: Use the text input field to send messages to other players during the game.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## Implementation Details
+### Server Behavior
+- **Connection Handling**: The server manages connections, sends player lists, handles disconnections, and broadcasts messages such as JOIN, READY, START, MOVE, and MSG to clients.
+- **Game Start**: When all players are ready, the server broadcasts a START message with a shuffled deck.
+- **Move Handling**: The server broadcasts MOVE messages to clients when a player makes a move.
+- **Chat Messages**: The server relays chat messages between clients.
 
-{% raw %}
+### Client Behavior
+- **Name Entry**: Players enter their names at the start.
+- **Server Connection**: The client connects to the game server using the provided IP and port.
+- **Game Logic**: The client handles game logic, such as dealing cards, making moves, and checking moves.
+- **Chat Functionality**: The client supports chat messages, which are displayed in the chat area.
+- **Game End**: The client shows game results in a dialog box when the game ends.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+### Class Specifications
+#### `BigTwoClient`
+- **Constructor**: Initializes players, GUI, and server connection.
+- **Instance Variables**: Includes player list, hands on the table, player ID, server details, socket, output stream, current index, and game table.
+- **Methods**: Implements methods for game logic, handling server messages, making moves, and managing the connection.
 
-{% endraw %}
+### Graphical User Interface (GUI)
+- **Chat Area**: Displays chat messages.
+- **Text Input Field**: Allows players to send chat messages.
+- **Connect Menu Item**: Establishes a connection to the game server.
+
+## Conclusion
+Enhancing the Big Two card game with networking and multi-threading allows for a more interactive and engaging multiplayer experience. By following the specifications and implementing the necessary classes and methods, you can successfully create a networked version of the Big Two game. Enjoy coding and have fun playing Big Two online with your friends!

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Songs I often listened to last semester
+title: Song I often listened to last semester
 date: 2024-07-09 01:01:00
 description: 写于Siebel (sb)
 categories: music

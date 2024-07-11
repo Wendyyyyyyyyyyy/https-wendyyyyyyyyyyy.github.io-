@@ -91,10 +91,8 @@
 - title: Languages
   type:  nested_list
   contents:
-    - title:  English 
-      items:  IELTS 7.0
-    - title: Chinese 
-      items: Native Speaker
+    - title:  English IELTS 7.0
+    - title: Chinese Native Speaker
 
 - title: Working Experience
   type: time_table

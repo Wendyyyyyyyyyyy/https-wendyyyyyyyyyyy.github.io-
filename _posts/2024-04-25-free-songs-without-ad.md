@@ -13,10 +13,6 @@ thumbnail: assets/img/33.jpeg
     </div>
 </div>
 
-<div class="caption">
-    安静的不安
-    
-</div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0 text-center">

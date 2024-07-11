@@ -72,14 +72,12 @@
   contents:
     - year: 2022 
       items:
-        - Dean’s Honours List, University of Hong Kong: Recognized for academic excellence during the academic year 2022-2023.
+        - Dean’s Honours List, University of Hong Kong 
     - year: 2021 
       items:
-        - Young Scientist Scheme, University of Hong Kong: Awarded for outstanding research potential and participation in advanced scientific research projects.
-    - year: 2024
+        - Young Scientist Scheme, University of Hong Kong
       items:
-        - HKU Worldwide Undergraduate Student Exchange Scholarships, University of Hong Kong: Awarded for participation in the undergraduate student exchange program.
-
+        - HKU Worldwide Undergraduate Student Exchange Scholarships, University of Hong Kong
 - title: Skills
   type: nested_list
   contents:
@@ -91,28 +89,22 @@
         - PyTorch, TensorFlow, Git, GDB, LaTeX, MySQL, MongoDB, Docker, GCP, Geogebra
 
 - title: Languages
-  type: list
+  type:  nested_list
   contents:
-    - name: English
-      value: IELTS 7.0
-    - name: Chinese
-      value: Native Speaker
+    - title:  English 
+      items:  IELTS 7.0
+    - title: Chinese 
+      items: Native Speaker
 
-- title: Volunteer Experience
+- title: Working Experience
   type: time_table
   contents:
     - title: Undergraduate Teaching Assistant
       institution: Department of Computer Science, University of Hong Kong
       year: 2023 
-      description:
-        - Assisted in teaching COMP1117-Computer Programming course.
     - title: Undergraduate Teaching Assistant
       institution: Department of Mathematics, University of Hong Kong
       year: 2023 
-      description:
-        - Assisted in teaching MATH Summer School (MARTHA).
     - title: Student Ambassador
       institution: Centre of Development and Resources for Students, University of Hong Kong
       year: 2023 
-      description:
-        - Represented the university in various outreach programs.

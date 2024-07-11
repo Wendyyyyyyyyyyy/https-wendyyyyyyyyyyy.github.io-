@@ -16,98 +16,104 @@
       year: 2024
       description:
         - Mathematics and Computer Sciences
+        - 4.0/4.0
     - title: Bachelor
       institution: University of Hong Kong, Hong Kong
       year: 2021 - Present
       description:
         - Mathematics and Computer Sciences
+        - 3.71/4.3
 
-- title: Experience
+- title: Research Experience
   type: time_table
   contents:
-#     - title: Research Assistant
-#       institution: University of Illinois Urbana-Champaign
-#       year: 2024 - Present
-#       description:
-#         - Chatbot for Mental Health Support
-#         - Supervised by Dr. Koustuv Saha
-#         - title: Summary
-#           contents:
-#             - Developing a conversational chatbot for supporting mental health of caregivers of Alzheimer's Disease and Related 
-# Dementias (AD/ADRD) patients. 
-#             - Engineering natural language processing (NLP) pipelines for chatbot interactions, including tokenization, encoding, and 
-# sentiment analysis. 
-#             - Fine-tuning pre-trained language models on domain-specific datasets. 
-#             - Conducting user studies to gather feedback from caregivers, addressing their concerns and preferences regarding chatbot 
-# usage. 
     - title: Research Assistant
       institution: University of Illinois Urbana-Champaign
-      year: 2024 - Present
+      year: May, 2024 - Present
       description:
-        - title: title
-          contents:
-            - Chatbot for Mental Health Support
-#         - title: Supervisor
-#           contents:
-#             - Dr. Koustuv Saha
-#         - Developing a conversational chatbot for supporting mental health of caregivers of Alzheimer's Disease and Related 
-# Dementias (AD/ADRD) patients. 
-#         - Engineering natural language processing (NLP) pipelines for chatbot interactions, including tokenization, encoding, and 
-# sentiment analysis. 
-#         - Fine-tuning pre-trained language models on domain-specific datasets. 
-#         - Conducting user studies to gather feedback from caregivers, addressing their concerns and preferences regarding chatbot 
-# usage. 
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Advised by Dr. Koustuv Saha
+        - Developing a conversational chatbot for supporting mental health of caregivers of Alzheimer's Disease and Related Dementias (AD/ADRD) patients.
+        - Engineering natural language processing (NLP) pipelines for chatbot interactions, including tokenization, encoding, and sentiment analysis.
+        - Fine-tuning pre-trained language models on domain-specific datasets.
+        - Conducting user studies to gather feedback from caregivers, addressing their concerns and preferences regarding chatbot usage.
+    - title: Research Assistant
+      institution: University of Hong Kong
+      year: May, 2023 - Jan, 2024
       description:
-        - Description 1.
-        - Description 2.
+        - Advised by Prof. Kenneth Wong
+        - Developed machine learning models for analyzing echocardiography videos, focused on prediction of ejection fraction.
+        - Pioneered the use of machine learning models for predicting left atrial volume.
+        - Achieved breakthroughs in accuracy, boosting model performance by 17.4% with an R-square around 0.8.
+        - Addressed the model's initial bias by augmenting the dataset through both manually collected rare data cases and training the model for labeling video data.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Cloud-Based Restaurant Recommendation System
+      year: Jan, 2024 - May, 2024
+      description:
+        - Developed a scalable restaurant recommendation web application on Google Cloud Platform (GCP).
+        - Using HTML for frontend, with Flask for backend services and MySQL for data management.
+    - title: Big Two Card Game Development
+      year: Sep, 2022 - Dec, 2022
+      description:
+        - Developed a Java-based Big Two card game featuring GUI, event-handling for user actions.
+        - Implemented multi-threading and networking, enabling real-time data processing and server communication.
+        - Engineered a client-server architecture to facilitate network play for four players.
+    - title: Website Development for Math Course
+      year: May, 2024 - Present
+      description:
+        - Utilized foundational HTML elements, including DOCTYPE declaration, metadata, and links, to define and format web content.
+        - Employed GitBook styles and plugins, and customized CSS styles to enhance the visual presentation, functionality, and consistency of the site.
+        - Integrated JavaScript, using the jQuery library, to handle dynamic elements and interactive events.
+        - Implemented meta tags for SEO and page metadata management.
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2022 - 2023
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - Dean’s Honours List, University of Hong Kong: Recognized for academic excellence during the academic year 2022-2023.
+    - year: 2021 - 2022
       items:
-        - Max Planck Medal
+        - Young Scientist Scheme, University of Hong Kong: Awarded for outstanding research potential and participation in advanced scientific research projects.
+    - year: 2024
+      items:
+        - HKU Worldwide Undergraduate Student Exchange Scholarships, University of Hong Kong: Awarded for participation in the undergraduate student exchange program.
 
-- title: Academic Interests
+- title: Skills
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Programming Languages
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Python, C++, C, HTML, CSS, JavaScript, TypeScript, Bash, LaTeX, Markdown, Java
+    - title: Frameworks and Tools
       items:
-        - Description 1.
-        - Description 2.
+        - PyTorch, TensorFlow, Git, GDB, LaTeX, MySQL, MongoDB, Docker, GCP, Geogebra
 
-- title: Other Interests
+- title: Languages
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - name: English
+      value: IELTS: 7.0
+    - name: Chinese
+      value: Native Speaker
+
+- title: Volunteer Experience
+  type: time_table
+  contents:
+    - title: Undergraduate Teaching Assistant
+      institution: Department of Computer Science, University of Hong Kong
+      year: Sep, 2023 - Dec, 2023
+      description:
+        - Assisted in teaching COMP1117-Computer Programming course.
+    - title: Undergraduate Teaching Assistant
+      institution: Department of Mathematics, University of Hong Kong
+      year: Jun, 2023 - Aug, 2023
+      description:
+        - Assisted in teaching MATH Summer School (MARTHA).
+    - title: Student Ambassador
+      institution: Centre of Development and Resources for Students, University of Hong Kong
+      year: Sep, 2023 - Present
+      description:
+        - Represented the university in various outreach programs.

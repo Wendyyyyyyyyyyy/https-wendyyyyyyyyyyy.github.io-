@@ -3,10 +3,10 @@
   contents:
     - name: Full Name
       value: Keran Wang
-    - name: Date of Birth
-      value: 15th September 2002
-    - name: Languages
-      value: English, Chinese
+    - name: Email
+      value: muke00915@gmail.com
+    - name: Phone
+      value: +(1) 818-869-8688 | +(86) 15201525223
 
 - title: Education
   type: time_table
@@ -25,16 +25,21 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Research Assistant
+      institution: University of Illinois Urbana-Champaign
+      year: 2024 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - Chatbot for Mental Health Support
+        - Supervised by Dr. Koustuv Saha
+        - title: Summary
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
+            - Developing a conversational chatbot for supporting mental health of caregivers of Alzheimer's Disease and Related 
+Dementias (AD/ADRD) patients. 
+            - Engineering natural language processing (NLP) pipelines for chatbot interactions, including tokenization, encoding, and 
+sentiment analysis. 
+            - Fine-tuning pre-trained language models on domain-specific datasets. 
+            - Conducting user studies to gather feedback from caregivers, addressing their concerns and preferences regarding chatbot 
+usage. 
     - title: Visiting Professor
       institution: California Institute of Technology, Pasadena, California, US
       year: 1933

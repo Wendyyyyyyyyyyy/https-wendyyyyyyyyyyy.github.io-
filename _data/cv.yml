@@ -19,17 +19,16 @@
         - 4.0/4.0
     - title: Bachelor
       institution: University of Hong Kong, Hong Kong
-      year: 2021 - Present
+      year: 2021 
       description:
         - Mathematics and Computer Sciences
-        - 3.71/4.3
 
 - title: Research Experience
   type: time_table
   contents:
     - title: Research Assistant
       institution: University of Illinois Urbana-Champaign
-      year: May, 2024 - Present
+      year: 2024 
       description:
         - Advised by Dr. Koustuv Saha
         - Developing a conversational chatbot for supporting mental health of caregivers of Alzheimer's Disease and Related Dementias (AD/ADRD) patients.
@@ -38,7 +37,7 @@
         - Conducting user studies to gather feedback from caregivers, addressing their concerns and preferences regarding chatbot usage.
     - title: Research Assistant
       institution: University of Hong Kong
-      year: May, 2023 - Jan, 2024
+      year: 2023
       description:
         - Advised by Prof. Kenneth Wong
         - Developed machine learning models for analyzing echocardiography videos, focused on prediction of ejection fraction.
@@ -50,18 +49,18 @@
   type: time_table
   contents:
     - title: Cloud-Based Restaurant Recommendation System
-      year: Jan, 2024 - May, 2024
+      year: 2024
       description:
         - Developed a scalable restaurant recommendation web application on Google Cloud Platform (GCP).
         - Using HTML for frontend, with Flask for backend services and MySQL for data management.
     - title: Big Two Card Game Development
-      year: Sep, 2022 - Dec, 2022
+      year: 2022
       description:
         - Developed a Java-based Big Two card game featuring GUI, event-handling for user actions.
         - Implemented multi-threading and networking, enabling real-time data processing and server communication.
         - Engineered a client-server architecture to facilitate network play for four players.
     - title: Website Development for Math Course
-      year: May, 2024 - Present
+      year: 2024
       description:
         - Utilized foundational HTML elements, including DOCTYPE declaration, metadata, and links, to define and format web content.
         - Employed GitBook styles and plugins, and customized CSS styles to enhance the visual presentation, functionality, and consistency of the site.
@@ -71,10 +70,10 @@
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 2022 - 2023
+    - year: 2022 
       items:
         - Dean’s Honours List, University of Hong Kong: Recognized for academic excellence during the academic year 2022-2023.
-    - year: 2021 - 2022
+    - year: 2021 
       items:
         - Young Scientist Scheme, University of Hong Kong: Awarded for outstanding research potential and participation in advanced scientific research projects.
     - year: 2024
@@ -95,7 +94,7 @@
   type: list
   contents:
     - name: English
-      value: IELTS: 7.0
+      value: IELTS 7.0
     - name: Chinese
       value: Native Speaker
 
@@ -104,16 +103,16 @@
   contents:
     - title: Undergraduate Teaching Assistant
       institution: Department of Computer Science, University of Hong Kong
-      year: Sep, 2023 - Dec, 2023
+      year: 2023 
       description:
         - Assisted in teaching COMP1117-Computer Programming course.
     - title: Undergraduate Teaching Assistant
       institution: Department of Mathematics, University of Hong Kong
-      year: Jun, 2023 - Aug, 2023
+      year: 2023 
       description:
         - Assisted in teaching MATH Summer School (MARTHA).
     - title: Student Ambassador
       institution: Centre of Development and Resources for Students, University of Hong Kong
-      year: Sep, 2023 - Present
+      year: 2023 
       description:
         - Represented the university in various outreach programs.

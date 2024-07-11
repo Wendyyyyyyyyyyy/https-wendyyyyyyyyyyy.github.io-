@@ -47,16 +47,16 @@
         - title: title
           contents:
             - Chatbot for Mental Health Support
-        - title: Supervis
-          contents:
-            - Dr. Koustuv Saha
-        - Developing a conversational chatbot for supporting mental health of caregivers of Alzheimer's Disease and Related 
-Dementias (AD/ADRD) patients. 
-        - Engineering natural language processing (NLP) pipelines for chatbot interactions, including tokenization, encoding, and 
-sentiment analysis. 
-        - Fine-tuning pre-trained language models on domain-specific datasets. 
-        - Conducting user studies to gather feedback from caregivers, addressing their concerns and preferences regarding chatbot 
-usage. 
+#         - title: Supervisor
+#           contents:
+#             - Dr. Koustuv Saha
+#         - Developing a conversational chatbot for supporting mental health of caregivers of Alzheimer's Disease and Related 
+# Dementias (AD/ADRD) patients. 
+#         - Engineering natural language processing (NLP) pipelines for chatbot interactions, including tokenization, encoding, and 
+# sentiment analysis. 
+#         - Fine-tuning pre-trained language models on domain-specific datasets. 
+#         - Conducting user studies to gather feedback from caregivers, addressing their concerns and preferences regarding chatbot 
+# usage. 
     - title: Visiting Professor
       institution: California Institute of Technology, Pasadena, California, US
       year: 1933

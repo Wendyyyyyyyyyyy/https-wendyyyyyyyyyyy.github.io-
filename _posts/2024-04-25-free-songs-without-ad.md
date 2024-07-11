@@ -21,11 +21,6 @@ thumbnail: assets/img/33.jpeg
 </div>
 
 
-<div class="caption">
-    抟扶摇而上者九万里
-
-</div>
-
 
 
 <div class="row mt-3">
@@ -38,9 +33,5 @@ thumbnail: assets/img/33.jpeg
     <div class="col-sm mt-3 mt-md-0">
         {% include video.liquid path="https://www.youtube.com/embed/lhwp8uoTRDc" class="img-fluid rounded z-depth-1" %}
     </div>
-</div>
-
-<div class="caption">
-    多少有点儿窒息
 </div>
 
